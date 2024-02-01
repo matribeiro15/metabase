@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  metabase:
+    build: ./install
+    container_name: metabase
+    hostname: metabase
+    volumes:
+    - /dev/urandom:/dev/random:ro
+    - ./data:/app
+    ports:
+      - 3000:3000
